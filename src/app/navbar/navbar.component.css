@@ -1,0 +1,105 @@
+nav {
+  margin: 0px 80px;
+}
+nav .containerHeader {
+  display: flex;
+  justify-content: space-between;
+}
+nav .containerHeader .headerAccount .avatar {
+  display: flex;
+  align-items: flex-end;
+}
+nav .containerHeader .headerAccount .avatar img {
+  margin-right: 8px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--circle);
+}
+nav .containerHeader .headerAccount .avatar .accountItem button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+nav .containerHeader .headerAccount .avatar .accountItem button i {
+  color: var(--color-text);
+}
+nav .containerHeader .headerAccount .avatar .accountItem .account {
+  position: absolute;
+  display: none;
+  transition: all 0.1s;
+}
+nav .containerHeader .headerAccount .avatar .accountItem .account .verticalAccount {
+  display: flex;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(5.5px);
+          backdrop-filter: blur(5.5px);
+  border-radius: var(--intermedio);
+  padding: 5px;
+  margin: 5px;
+}
+nav .containerHeader .headerAccount .avatar .accountItem .account .verticalAccount a {
+  padding: 2px 0;
+  text-decoration: none;
+  color: var(--color-text);
+}
+nav .containerHeader .headerAccount .avatar .accountItem:hover .account {
+  display: block;
+}
+nav .containerHeader .headerMenu {
+  display: flex;
+  justify-content: right;
+}
+nav .containerHeader .headerMenu ul {
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+nav .containerHeader .headerMenu ul li {
+  display: flex;
+  align-items: flex-end;
+  list-style: none;
+}
+nav .containerHeader .headerMenu ul li a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-family: var(--fontText);
+  color: var(--color-text);
+  position: relative;
+}
+nav .containerHeader .headerMenu ul li a:after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: var(--color-border);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transition: all 0.5s;
+  will-change: width;
+}
+nav .containerHeader .headerMenu ul li a:hover:after {
+  width: 100%;
+  right: 0;
+}
+nav .containerHeader .headerMenu ul li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-offset);
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--circle);
+  margin-left: 16px;
+  transition: all 0.3s ease-in-out;
+}
+nav .containerHeader .headerMenu ul li span i {
+  color: var(--color-text);
+}
+nav .containerHeader .headerMenu ul li span:hover {
+  background-color: var(--color-border);
+}
+nav .containerHeader .headerMenu .menuToggle {
+  position: relative;
+  display: none;
+}/*# sourceMappingURL=navbar.component.css.map */

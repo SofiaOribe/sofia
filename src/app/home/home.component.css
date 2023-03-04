@@ -1,0 +1,22 @@
+.face {
+  width: 100%;
+}
+.face .welcome .first p {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-family: var(--fontText);
+  font-weight: 400;
+}
+.face .welcome .second h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 94px;
+  font-family: var(--fontTitles);
+}
+.face .welcome .third p {
+  color: var(--color-text);
+  font-size: 32px;
+  font-family: var(--fontText);
+  font-weight: 200;
+}/*# sourceMappingURL=home.component.css.map */

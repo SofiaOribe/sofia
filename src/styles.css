@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap");
+:root {
+  /*Light*/
+  --color-bg: #fef6e4;
+  --color-bg-offset: #f3e1d8;
+  --color-text: #172c66;
+  --color-text-offset: #006e8a;
+  --color-border: #f3d2c1;
+  --color-primary: #f582ae;
+  --color-primary-offset: #ff3d6a;
+  --color-secondary: #8bd3dd;
+  /*Night*/
+  --color-bg2: #0e141b;
+  --color-bg-offset2: #252526;
+  --color-tex2t: #ffffff;
+  --color-text-offset2: #818a91;
+  --color-border2: #2d2d2d;
+  --color-primary2: #ff5277;
+  --color-primary-offset2: #ff2957;
+  --color-secondary2: #43a9a3;
+  /*Fonts*/
+  --fontTitles: "Playfair Display";
+  --fontText: "Josefin Sans";
+  /*Tamaños*/
+  --circle: 50px;
+  --intermedio: 15px;
+}
+
+body {
+  background: var(--color-bg);
+}
+
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  background-color: rgba(254, 246, 228, 0.3019607843);
+  box-shadow: 0 8px 32px 0 rgba(73, 73, 73, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+}/*# sourceMappingURL=styles.css.map */

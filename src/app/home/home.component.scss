@@ -1,0 +1,47 @@
+.face {
+    padding-top: 50px;
+    width: 100%;
+    .welcome {
+        .first {
+            p {
+                margin: 0;
+                color: var(--color-primary);
+                font-size: 16px;
+                font-family: var(--fontText);
+                font-weight: 400;
+            }
+        }
+        .second {
+            h1 {
+                margin: 0;
+                color: var(--color-text);
+                font-size: 94px;
+                font-family: var(--fontTitles);
+                font-weight: 700;
+            }
+        }
+        .third {
+            h2 {
+                margin: 0;
+                padding-top: 10px;
+                font-size: 80px;
+                font-family: var(--fontText);
+                font-weight: 500;
+                color: var(--color-text-offset);
+            }
+        }
+        .fourth {
+            p {
+                
+                color:var(--color-text);
+                font-size: 32px;
+                font-family: var(--fontText);
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.proyectsHome {
+    margin: 250px 0;
+}

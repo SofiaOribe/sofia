@@ -1,0 +1,96 @@
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    font-family: var(--fontText);
+    padding: 0;
+}
+  
+  .wrapper .icon {
+    position: relative;
+    background: var(--color-text-offset);
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: var(--color-bg);
+    color: #ffffff;
+    padding: 8px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: var(--color-bg);
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
+    background: #0f52aa;
+    color: #ffffff;
+  }
+  
+  .wrapper .email:hover,
+  .wrapper .email:hover .tooltip,
+  .wrapper .email:hover .tooltip::before {
+    background: #1da1f2;
+    color: #ffffff;
+  }
+  
+  
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+  }
+
+.createBy {
+    display: flex;
+    justify-content: center;
+    p {
+        font-family: var(--fontText);
+        font-size: 12px;
+        text-align: center;
+        color: var(--color-text);
+    }
+}
+  

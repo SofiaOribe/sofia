@@ -1,0 +1,133 @@
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.category .card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 350px;
+  height: 550px;
+  text-align: center;
+  color: var(--color-bg);
+  border-radius: 17px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+  transition: all 500ms ease-in-out;
+}
+.category .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.category .card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 0) 0%, hsla(0deg, 0%, 0%, 0.009) 11.7%, hsla(0deg, 0%, 0%, 0.034) 22.1%, hsla(0deg, 0%, 0%, 0.072) 31.2%, hsla(0deg, 0%, 0%, 0.123) 39.4%, hsla(0deg, 0%, 0%, 0.182) 46.6%, hsla(0deg, 0%, 0%, 0.249) 53.1%, hsla(0deg, 0%, 0%, 0.32) 58.9%, hsla(0deg, 0%, 0%, 0.394) 64.3%, hsla(0deg, 0%, 0%, 0.468) 69.3%, hsla(0deg, 0%, 0%, 0.54) 74.1%, hsla(0deg, 0%, 0%, 0.607) 78.8%, hsla(0deg, 0%, 0%, 0.668) 83.6%, hsla(0deg, 0%, 0%, 0.721) 88.7%, hsla(0deg, 0%, 0%, 0.762) 94.1%, hsla(0deg, 0%, 0%, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.category .card .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.category .card .content > * + * {
+  margin-top: 1rem;
+}
+.category .card .content .title {
+  font-family: var(--fontTitle);
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--color-text);
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.category .card .content .title:hover {
+  background-color: var(--color-text-offset);
+}
+.category .card .content .copy {
+  font-family: var(--fontText);
+  font-size: 1.125rem;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+.category .card .content a {
+  text-decoration: none;
+}
+.category .card:nth-child(1):before {
+  background-image: url(https://static.wixstatic.com/media/5906ab_7a273a3d70334f5a875ac4839b1b1d7c~mv2.jpg);
+}
+.category .card:nth-child(2):before {
+  background-image: url(https://static.wixstatic.com/media/5906ab_2e2fd90642fa4e529a11d612a9874a49~mv2.jpg);
+}
+.category .card:nth-child(3):before {
+  background-image: url(https://static.wixstatic.com/media/5906ab_a5aa826a3e36448bba7526742f32ea3c~mv2.jpg);
+}
+@media (hover: hover) and (min-width: 600px) {
+  .category .card:after {
+    transform: translateY(0);
+  }
+  .category .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .category .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+  .category .card:hover,
+.category .card:focus-within {
+    align-items: center;
+  }
+  .category .card:hover:before,
+.category .card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .category .card:hover:after,
+.category .card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .category .card:hover .content,
+.category .card:focus-within .content {
+    transform: translateY(0);
+  }
+  .category .card:hover .content > *:not(.title),
+.category .card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+  .category .card:focus-within:before, .category .card:focus-within:after,
+.category .card:focus-within .content,
+.category .card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}/*# sourceMappingURL=proyects.component.css.map */

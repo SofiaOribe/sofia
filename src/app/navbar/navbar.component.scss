@@ -1,0 +1,119 @@
+nav {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    .containerHeader {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        .headerAccount {
+            .avatar {
+                display: flex;
+                align-items:flex-end;
+                img {
+                    margin-right: 8px;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius:var(--circle);
+                }
+                .accountItem {
+                    button {
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                        i {
+                            color: var(--color-text);
+                        }
+                    }
+                    .account {
+                        position: absolute;
+                        display: none;
+                        transition: all .1s ;
+                        .verticalAccount {
+                            display: flex;
+                            flex-direction: column;
+                            background-color: var(--color-border);
+                            backdrop-filter: blur( 5.5px );
+                            border-radius: var(--intermedio);
+                            padding: 2px 10px;
+                            margin: 0;
+                            a {
+                                line-height: 1.2;
+                                padding: 2px 0;
+                                text-decoration: none;
+                                color: var(--color-text);
+                                font-family: var(--fontText);
+                                &:hover {
+                                    color: var(--color-primary);
+                                }
+                            }
+                        }
+                    }
+                    &:hover .account {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .headerMenu {
+            display: flex;
+            justify-content: right;;
+            ul {
+                display: flex;
+                position: relative;
+                margin: 0;
+                padding: 0;
+                li {
+                    display: flex;
+                    align-items:flex-end;
+                    list-style: none;
+                    a {
+                        padding: 12px 20px;
+                        text-decoration: none;
+                        font-family: var(--fontText);
+                        color: var(--color-text);
+                        position: relative;
+                        &:after {
+                            content: "";
+                            width: 0;
+                            height: 4px;
+                            background-color:var(--color-secondary);
+                            position: absolute;
+                            bottom: 0;
+                            right: 50%;
+                            transition: all .5s;
+                            will-change: width;
+                        }
+                        &:hover:after {
+                            width: 100%;
+                            right: 0;
+                        }
+                    }
+                    span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--color-bg-offset);
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: var(--circle);
+                        margin-left: 16px;
+                        transition: all .3s ease-in-out;
+                        cursor: pointer;
+                        i {
+                            color: var(--color-text);
+                        }
+                        &:hover {
+                            background-color: var(--color-secondary);
+                        }
+                    }
+                    
+                }
+            }
+            .menuToggle {
+                position: relative;
+                display: none;
+            }
+        }
+    }
+}

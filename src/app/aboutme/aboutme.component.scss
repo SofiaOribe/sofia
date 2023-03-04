@@ -1,0 +1,83 @@
+.titles {
+    text-align: center;
+    h1{ 
+        margin: 0;
+        font-family: var(--fontTitle);
+        font-size: 90px;
+        color: var(--color-text);
+    }
+}
+
+
+.my-present {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 150px 0;
+    .my-image {
+        img {
+            width: 350px;
+            height: 350px;
+            border-radius: var(--intermedio);
+        }
+    }
+    .my-text {
+        width: 350px;
+        p {
+            margin: 0;
+            font-family: var(--fontText);
+            font-size: 20px;
+            color: var(--color-text);
+            line-height: 1.2;
+        }
+    }
+}
+
+
+.information-studies {
+
+    .row-studies {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: var(--color-text);
+        .study {
+            display: flex;
+            margin: 10px 0;
+            span {
+                margin: 0;
+                padding: 0 10px;
+                font-family: var(--fontText);
+                font-size: 35px;
+                font-weight: 100;
+                color: var(--color-primary);
+            }
+            h3 {
+                margin: 0;
+                font-family: var(--fontText);
+                font-weight: 400;
+                font-size: 35px;
+            }
+        }
+        .institute {
+            text-align: right;
+            font-family: var(--fontText);
+            h4 {
+                font-weight: 400;
+                margin: 0;
+            }
+            p {
+                font-weight: 400;
+                font-size: 12px;
+                margin: 0;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .row-studies {
+        display: none;
+    }
+}
